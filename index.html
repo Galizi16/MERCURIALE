@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outil de Commande</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Outil de Sélection d'Articles</h1>
+        </header>
+
+        <main>
+            <!-- Section de recherche -->
+            <section class="card">
+                <h2>1. Rechercher un article</h2>
+                
+                <div class="source-selector">
+                    <!-- MISE À JOUR : Noms des sources de données -->
+                    <label>
+                        <input type="radio" name="source" value="folkestone" checked>
+                        Mercuriale Folkestone
+                    </label>
+                    <label>
+                        <input type="radio" name="source" value="vendome">
+                        Mercuriale Vendome
+                    </label>
+                </div>
+                
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Entrez un code produit ou un mot-clé...">
+                </div>
+
+                <div id="searchResults" class="results-container">
+                    <p class="placeholder">Les résultats s'afficheront ici après votre recherche.</p>
+                </div>
+            </section>
+
+            <!-- Section de la commande finale -->
+            <section class="card">
+                <h2>2. Articles à commander</h2>
+                <div id="orderList" class="results-container">
+                    <p class="placeholder">Aucun article ajouté pour le moment.</p>
+                </div>
+                <button id="downloadCsvBtn" class="btn-download" disabled>Télécharger la commande en CSV</button>
+            </section>
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
